@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Homepage</title>
+</head>
+<body>
+   <h3 id="user-name"></h3>
+</body>
+</html>
+
+<script>
+    async function fetchUserName() {
+        const userId = localStorage.getItem('userId');
+        if (!userId) {
+            window.location.href = 'signup.html'
+            return;
+        }
+
+        try {
+            const response = await fetch(`/user-name/${userId}`);
+            const result = await response.json();
+            const userInfoDiv = document.getElementById('user-name');
+
+            if (result.success) {
+                const user = result.user;
+                userInfoDiv.innerText = `Welcome, ${user.name}!`;
+            } else {
+                userInfoDiv.innerText = 'Error fetching user name';
+            }
+        } catch (error) {
+            console.error('Error fetching user name:', error);
+            userInfoDiv.innerText = 'An error occurred';
+        }
+    }
+
+    // Fetch user info when the page loads
+    document.addEventListener('DOMContentLoaded', fetchUserName);
+</script>

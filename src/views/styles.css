@@ -1,0 +1,64 @@
+* {
+  font-family: "roboto", sans-serif;
+}
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  width: 30rem;
+  border: 1px black solid;
+  padding: 20px;
+  gap: 10px;
+}
+
+#signupForm label {
+  font-weight: 700;
+}
+
+input {
+  height: 2rem;
+  border-radius: 8px;
+  border: 1px black solid;
+}
+
+.signupBtn {
+  height: 2.5rem;
+  border-radius: 8px;
+  border: 1px #3498db solid;
+  background-color: white;
+  color: #3498db;
+  font-size: larger;
+}
+
+.signupBtn:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+#message {
+  display: flex;
+  justify-content: center;
+}
+
+.loginLink {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#signinForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  width: 30rem;
+  border: 1px black solid;
+  padding: 20px;
+  gap: 10px;
+}
