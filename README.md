@@ -10,6 +10,11 @@ npm run startDev
 
 The server will run on `http://localhost:3000`
 
+## Database
+mongodb
+
+- mongodb://localhost:27017/Sample
+
 ## Endpoints:
 
 - `POST /signup-user` - Sign up a new user
@@ -22,3 +27,4 @@ The server will run on `http://localhost:3000`
 - nodemon
 - mongoose
 - bcrypt
+
